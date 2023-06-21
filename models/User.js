@@ -35,6 +35,10 @@ User.init(
         len: [6],
       },
     },
+    user_id: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {
     hooks: {
