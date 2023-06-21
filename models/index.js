@@ -1,7 +1,7 @@
 const User = require('./User');
 const Category = require('./Category');
 
-Category.belongsTo(User, {
+User.hasMany(Category, {
     foreignKey: 'user_id',
     onDelete: 'CASCADE'
 });
