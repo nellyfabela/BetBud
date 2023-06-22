@@ -41,5 +41,9 @@ router.get('/buds', function(req, res) {
     res.render('buds');
 }) 
 
+router.get('/createbet', function(req, res) {
+  res.render('createbet');
+}) 
+
 
 module.exports = router;
