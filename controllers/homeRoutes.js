@@ -1,22 +1,21 @@
 const router = require('express').Router();
 const {User, Category} = require('../models');
 
-router.get('/', async(req, res) => {
-    try{
-        const userData = await User.findAll({
-            include : [
-                {
-                    model: Category,
-                    attributes: ['category_name']
-                },
-            ],
-        });
-        const users = userData.map((user) => user.get({ plain:true }));
-        res.status(200).json({users});
-        
-    } catch(err){
-        res.status(500).json(err);
-    }
+router.get("/", async (req, res) => {
+  try {
+    const userData = await User.findAll({
+      include: [
+        {
+          model: Category,
+          attributes: ["category_name"],
+        },
+      ],
+    });
+    const users = userData.map((user) => user.get({plain: true}));
+    res.status(200).json(users);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 router.get('/buds', async function(req, res) {
@@ -31,8 +30,10 @@ try {
 }
 })
 
+
 router.get('/bets', function(req, res) {
-    res.render('bets', {nums:[{value:9},{value:8},{value:3},{value:7}]})
+  const nums = [{value:1},{value:2}]
+    res.render('bets', {nums})
 }) 
 
 module.exports = router;
