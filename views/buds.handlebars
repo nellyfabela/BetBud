@@ -2,6 +2,8 @@
 Change class "fixed" to "sticky" in "navbar" (l. 33) so the navbar doesn't hide any of your page content!
 -->
 
+
+<!-- style of navbar and sidebar start -->
 <style>
     ul.breadcrumb li+li::before {
         content: "\276F";
@@ -28,6 +30,8 @@ Change class "fixed" to "sticky" in "navbar" (l. 33) so the navbar doesn't hide 
         background-color: #1f2937;
     }
 </style>
+<!-- style of navbar and sidebar end -->
+
 
 <!-- Navbar start -->
 <nav id="navbar" class="fixed top-0 z-40 flex w-full flex-row justify-end bg-gray-700 px-4 sm:justify-between">
@@ -104,7 +108,165 @@ Change class "fixed" to "sticky" in "navbar" (l. 33) so the navbar doesn't hide 
 <div> {{user_id}} </div>
 {{/each}} --}}
 
+<!--bud searchbar start-->
+<div class="relative text-lg bg-transparent text-gray-800">
+  <div class="flex items-center border-b border-b-2 border-teal-500 py-2">
+	<input class="bg-transparent border-none mr-3 px-2 leading-tight focus:outline-none" type="text" placeholder="Add a new bud by id number...">
+	<button type="submit" class="absolute right-0 top-0 mt-3 mr-4">
+      <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve" width="512px" height="512px">
+          <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"/>
+      </svg>
+	</button>
+  </div>
+</div>
+<!--bud searchbar end-->
 
+
+
+<!-- table of buds template start -->
+<link
+	href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+	rel="stylesheet">
+<div class="flex items-center justify-center min-h-screen bg-gray-900">
+	<div class="col-span-12">
+		<div class="overflow-auto lg:overflow-visible ">
+			<table class="table text-gray-400 border-separate space-y-6 text-sm">
+				<thead class="bg-gray-800 text-gray-500">
+					<tr>
+						<th class="p-3">Brand</th>
+						<th class="p-3 text-left">Category</th>
+						<th class="p-3 text-left">Price</th>
+						<th class="p-3 text-left">Status</th>
+						<th class="p-3 text-left">Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="bg-gray-800">
+						<td class="p-3">
+							<div class="flex align-items-center">
+								<img class="rounded-full h-12 w-12  object-cover" src="https://images.unsplash.com/photo-1613588718956-c2e80305bf61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80" alt="unsplash image">
+								<div class="ml-3">
+									<div class="">Appple</div>
+									<div class="text-gray-500">mail@rgmail.com</div>
+								</div>
+							</div>
+						</td>
+						<td class="p-3">
+							Technology
+						</td>
+						<td class="p-3 font-bold">
+							200.00$
+						</td>
+						<td class="p-3">
+							<span class="bg-green-400 text-gray-50 rounded-md px-2">available</span>
+						</td>
+						<td class="p-3 ">
+							<a href="#" class="text-gray-400 hover:text-gray-100 mr-2">
+								<i class="material-icons-outlined text-base">visibility</i>
+							</a>
+							<a href="#" class="text-gray-400 hover:text-gray-100  mx-2">
+								<i class="material-icons-outlined text-base">edit</i>
+							</a>
+							<a href="#" class="text-gray-400 hover:text-gray-100  ml-2">
+								<i class="material-icons-round text-base">delete_outline</i>
+							</a>
+						</td>
+					</tr>
+					<tr class="bg-gray-800">
+						<td class="p-3">
+							<div class="flex align-items-center">
+								<img class="rounded-full h-12 w-12   object-cover" src="https://images.unsplash.com/photo-1423784346385-c1d4dac9893a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="unsplash image">
+								<div class="ml-3">
+									<div class="">Realme</div>
+									<div class="text-gray-500">mail@rgmail.com</div>
+								</div>
+							</div>
+						</td>
+						<td class="p-3">
+							Technology
+						</td>
+						<td class="p-3 font-bold">
+							200.00$
+						</td>
+						<td class="p-3">
+							<span class="bg-red-400 text-gray-50 rounded-md px-2">no stock</span>
+						</td>
+						<td class="p-3">
+							<a href="#" class="text-gray-400 hover:text-gray-100  mr-2">
+								<i class="material-icons-outlined text-base">visibility</i>
+							</a>
+							<a href="#" class="text-gray-400 hover:text-gray-100 mx-2">
+								<i class="material-icons-outlined text-base">edit</i>
+							</a>
+							<a href="#" class="text-gray-400 hover:text-gray-100 ml-2">
+								<i class="material-icons-round text-base">delete_outline</i>
+							</a>
+						</td>
+					</tr>
+					<tr class="bg-gray-800">
+						<td class="p-3">
+							<div class="flex align-items-center">
+								<img class="rounded-full h-12 w-12   object-cover" src="https://images.unsplash.com/photo-1600856209923-34372e319a5d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2135&q=80" alt="unsplash image">
+								<div class="ml-3">
+									<div class="">Samsung</div>
+									<div class="text-gray-500">mail@rgmail.com</div>
+								</div>
+							</div>
+						</td>
+						<td class="p-3">
+							Technology
+						</td>
+						<td class="p-3 font-bold">
+							200.00$
+						</td>
+						<td class="p-3">
+							<span class="bg-yellow-400 text-gray-50  rounded-md px-2">start sale</span>
+						</td>
+						<td class="p-3">
+							<a href="#" class="text-gray-400 hover:text-gray-100 mr-2">
+								<i class="material-icons-outlined text-base">visibility</i>
+							</a>
+							<a href="#" class="text-gray-400 hover:text-gray-100 mx-2">
+								<i class="material-icons-outlined text-base">edit</i>
+							</a>
+							<a href="#" class="text-gray-400 hover:text-gray-100 ml-2">
+								<i class="material-icons-round text-base">delete_outline</i>
+							</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<style>
+	.table {
+		border-spacing: 0 15px;
+	}
+
+	i {
+		font-size: 1rem !important;
+	}
+
+	.table tr {
+		border-radius: 20px;
+	}
+
+	tr td:nth-child(n+5),
+	tr th:nth-child(n+5) {
+		border-radius: 0 .625rem .625rem 0;
+	}
+
+	tr td:nth-child(1),
+	tr th:nth-child(1) {
+		border-radius: .625rem 0 0 .625rem;
+	}
+</style>
+<!-- table of buds template end -->
+
+
+
+<!-- script of navbar and sidebar start -->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", () => {
         const navbar = document.getElementById("navbar");
@@ -123,3 +285,4 @@ Change class "fixed" to "sticky" in "navbar" (l. 33) so the navbar doesn't hide 
         sidebar.style.top = parseInt(navbar.clientHeight) - 1 + "px";
     });
 </script>
+<!-- script of navbar and sidebar start -->
