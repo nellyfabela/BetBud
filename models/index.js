@@ -7,14 +7,19 @@ User.hasMany(Category, {
   onDelete: "CASCADE",
 });
 
-// Category.hasMany(Product, {
-//     foreignKey: 'category_name',
-//     onDelete: 'CASCADE'
-// });
+Category.belongsTo(User, {
+  foreignKey: "user_id",
+})
+
+Category.hasMany(Product, {
+    foreignKey: 'category_name',
+    onDelete: 'CASCADE'
+});
 
 Product.belongsTo(Category, {
   foreignKey: "category_name",
-  onDelete: "CASCADE",
 });
+
+
 
 module.exports = { User, Category, Product };
