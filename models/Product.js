@@ -18,7 +18,7 @@ Product.init(
         category_name: {
             type: DataTypes.STRING,
             references: {
-                model: 'caterogy',
+                model: 'category',
                 key: 'category_name'
             },
         },
