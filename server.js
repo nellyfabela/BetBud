@@ -1,9 +1,10 @@
+const PORT = process.env.PORT || 3001;
+
 /* import */ 
 const path = require('path');
 const express = require('express');
 const sequelize = require('./config/connection');
 const routes = require('./controllers');
-
 const exphbs = require('express-handlebars');
 const session = require('express-session');
 const helpers = require('./utils/helpers');
