@@ -24,11 +24,11 @@ router.get("/", async (req, res) => {
 
 
 router.get('/bets', function(req, res) {
-    res.render('bets');
+  res.render('bets');
 }) 
 
 router.get('/buds', function(req, res) {
-    res.render('buds');
+  res.render('buds');
 }) 
 
 router.get('/createbet', function(req, res) {
