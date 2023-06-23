@@ -2,6 +2,7 @@
 Change class "fixed" to "sticky" in "navbar" (l. 33) so the navbar doesn't hide any of your page content!
 -->
 
+<!-- style of navbar and sidebar start -->
 <style>
     ul.breadcrumb li+li::before {
         content: "\276F";
@@ -28,9 +29,11 @@ Change class "fixed" to "sticky" in "navbar" (l. 33) so the navbar doesn't hide 
         background-color: #1f2937;
     }
 </style>
+<!-- style of navbar and sidebar end -->
+ 
 
 <!-- Navbar start -->
-<nav id="navbar" class="fixed top-0 z-40 flex w-full flex-row justify-end bg-gray-700 px-4 sm:justify-between">
+<nav id="navbar" class="sticky top-0 z-40 flex w-full flex-row justify-end bg-gray-700 px-4 sm:justify-between">
     <ul class="breadcrumb hidden flex-row items-center py-4 text-lg text-white sm:flex">
         <li class="inline">
             <a href="#">Main</a>
@@ -102,6 +105,8 @@ Change class "fixed" to "sticky" in "navbar" (l. 33) so the navbar doesn't hide 
 <div> value {{ value }}  </div>
 {{/each}} --}}
 
+
+<!-- script of navbar and sidebar start -->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", () => {
         const navbar = document.getElementById("navbar");
@@ -120,3 +125,4 @@ Change class "fixed" to "sticky" in "navbar" (l. 33) so the navbar doesn't hide 
         sidebar.style.top = parseInt(navbar.clientHeight) - 1 + "px";
     });
 </script>
+<!-- script of navbar and sidebar start -->
