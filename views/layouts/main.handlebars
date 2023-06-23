@@ -43,43 +43,43 @@
             <!-- Navbar end -->
 
             <!-- Sidebar start-->
-            <div id="containerSidebar" class="z-40">
+            <div id="containerSidebar" class="z-40 transform translate-x-full transition-transform duration-500 ease-in-out bg-gray-200 w-64 fixed right-0 top-0 h-full overflow-auto">
                 <div class="navbar-menu relative z-40">
                     <nav id="sidebar"
                         class="fixed left-0 bottom-0 flex w-3/4 -translate-x-full flex-col overflow-y-auto bg-gray-700 pt-6 pb-8 sm:max-w-xs lg:w-80">
                         
                         <!-- Conditionally render login or logout links -->
-                    {{#if logged_in}}
+                    {{!-- {{#if logged_in}} --}}
                         <!-- one category / navigation group -->
                         <div class="px-4 pb-6">
                             <h3 class="mb-2 text-xs font-medium uppercase text-gray-500">
                                 BetBud
                             </h3>
-                            <ul class="mb-8 text-sm font-medium">
-                                <li>
-                                    <i class="lni lni-home"></i>
-                                    <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
+                            <ul class="mb-8 text-sm font-medium content-center">
+                                <li class="flex-row items-stretch">
+                                    <i class="lni lni-home justify-self-start self-center"></i>
+                                    <a class="active flex rounded py-3 pl-4 pr-4 text-gray-50 hover:bg-gray-600"
                                         href="#homepage">
                                         <span class="select-none">Home</span>
                                     </a>
                                 </li>
-                                <li>
-                                    <i class="lni lni-user"></i>
-                                    <a class="flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
+                                <li class="flex-row items-stretch">
+                                    <i class="lni lni-user justify-self-start self-center"></i>
+                                    <a class="flex rounded py-3 pl-4 pr-4 text-gray-50 hover:bg-gray-600"
                                         href="#link1">
                                         <span class="select-none">My profile</span>
                                     </a>
                                 </li>
-                                <li>
-                                    <i class="lni lni-users"></i>
-                                    <a class="flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
+                                <li class="flex-row items-stretch">
+                                    <i class="lni lni-users justify-self-start self-center"></i>
+                                    <a class="flex  rounded py-3 pl-4 pr-4 text-gray-50 hover:bg-gray-600"
                                         href="#link1">
                                         <span class="select-none">My buds</span>
                                     </a>
                                 </li>
-                                <li>
-                                    <i class="lni lni-ticket"></i>
-                                    <a class="flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
+                                <li class="flex-row items-stretch">
+                                    <i class="lni lni-ticket justify-self-start self-center"></i>
+                                    <a class="flex rounded py-3 pl-4 pr-4 text-gray-50 hover:bg-gray-600"
                                         href="#link1">
                                         <span class="select-none">My bets</span>
                                     </a>
@@ -87,10 +87,10 @@
                             </ul>
                         </div>
                         <button class="no-button" id="logout">logout</button>
-                            {{else}}
+                            {{!-- {{else}} --}}
             {{!-- Change the link for the updated URL for LOGIN --}}
-                            <a href="/login">Login</a>
-                            {{/if}}
+                            {{!-- <a href="/login">Login</a>
+                            {{/if}} --}}
                     </nav>
                 </div>
                 <div class="mx-auto lg:ml-80"></div>
@@ -102,11 +102,24 @@
             <!-- Render the sub layout -->
             {{{body}}}
         </main>
-        
+
         <footer>
 
         </footer>
     </div>
+
+    <script>
+    var toggleButton = document.getElementById('btnSidebarToggler');
+    const sidebar = document.getElementById('containerSidebar');
+
+    toggleButton.addEventListener('click', function() {
+       if (sidebar.classList.contains('translate-x-full')) {
+            sidebar.classList.remove('translate-x-full');
+    }  else {
+            sidebar.classList.add('translate-x-full');
+  }
+    });
+    </script>
 
     <!-- Render script for logged in users only -->
     {{#if logged_in}}
