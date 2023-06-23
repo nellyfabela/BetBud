@@ -4,7 +4,7 @@ Change class "fixed" to "sticky" in "navbar" (l. 33) so the navbar doesn't hide 
 
 
 <!-- style of navbar and sidebar start -->
-<style>
+{{!-- <style>
     ul.breadcrumb li+li::before {
         content: "\276F";
         padding-left: 8px;
@@ -29,12 +29,12 @@ Change class "fixed" to "sticky" in "navbar" (l. 33) so the navbar doesn't hide 
         background: #1f2937;
         background-color: #1f2937;
     }
-</style>
+</style> --}}
 <!-- style of navbar and sidebar end -->
 
 
 <!-- Navbar start -->
-<nav id="navbar" class="sticky top-0 z-40 flex w-full flex-row justify-end bg-gray-700 px-4 sm:justify-between">
+{{!-- <nav id="navbar" class="sticky top-0 z-40 flex w-full flex-row justify-end bg-gray-700 px-4 sm:justify-between">
     <ul class="breadcrumb hidden flex-row items-center py-4 text-lg text-white sm:flex">
         <li class="inline">
             <a href="#">Main</a>
@@ -53,11 +53,11 @@ Change class "fixed" to "sticky" in "navbar" (l. 33) so the navbar doesn't hide 
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
         </svg>
     </button>
-</nav>
+</nav> --}}
 <!-- Navbar end -->
 
 <!-- Sidebar start-->
-<div id="containerSidebar" class="z-40">
+{{!-- <div id="containerSidebar" class="z-40">
     <div class="navbar-menu relative z-40">
         <nav id="sidebar"
             class="fixed left-0 bottom-0 flex w-3/4 -translate-x-full flex-col overflow-y-auto bg-gray-700 pt-6 pb-8 sm:max-w-xs lg:w-80">
@@ -96,12 +96,15 @@ Change class "fixed" to "sticky" in "navbar" (l. 33) so the navbar doesn't hide 
         </nav>
     </div>
     <div class="mx-auto lg:ml-80"></div>
-</div>
+</div> --}}
 <!-- Sidebar end -->
 
 
 
-<h3> My buds </h3>
+<header class="flex items-center justify-center h-16 bg-black">
+  <h3 class="text-white text-lg">My buds</h3>
+</header>
+
 {{!-- {{#each parseData}}
 <div> {{id}} </div>
 <div> {{category_name}} </div>
@@ -136,19 +139,10 @@ Change class "fixed" to "sticky" in "navbar" (l. 33) so the navbar doesn't hide 
 						<td class="p-3">
 							<div class="flex align-items-center">
 								<div class="ml-3">
-									<div class="">Appple</div>
-									<div class="text-gray-500">mail@rgmail.com</div>
+									<div class="">username</div>
+									<div class="text-gray-500">id number</div>
 								</div>
 							</div>
-						</td>
-						<td class="p-3">
-							Technology
-						</td>
-						<td class="p-3 font-bold">
-							200.00$
-						</td>
-						<td class="p-3">
-							<span class="bg-green-400 text-gray-50 rounded-md px-2">available</span>
 						</td>
 						<td class="p-3 ">
 							<a href="#" class="text-gray-400 hover:text-gray-100 mr-2">
@@ -166,19 +160,10 @@ Change class "fixed" to "sticky" in "navbar" (l. 33) so the navbar doesn't hide 
 						<td class="p-3">
 							<div class="flex align-items-center">
 								<div class="ml-3">
-									<div class="">Realme</div>
-									<div class="text-gray-500">mail@rgmail.com</div>
+									<div class="">username</div>
+									<div class="text-gray-500">id number</div>
 								</div>
 							</div>
-						</td>
-						<td class="p-3">
-							Technology
-						</td>
-						<td class="p-3 font-bold">
-							200.00$
-						</td>
-						<td class="p-3">
-							<span class="bg-red-400 text-gray-50 rounded-md px-2">no stock</span>
 						</td>
 						<td class="p-3">
 							<a href="#" class="text-gray-400 hover:text-gray-100  mr-2">
@@ -196,19 +181,10 @@ Change class "fixed" to "sticky" in "navbar" (l. 33) so the navbar doesn't hide 
 						<td class="p-3">
 							<div class="flex align-items-center">
 								<div class="ml-3">
-									<div class="">Samsung</div>
-									<div class="text-gray-500">mail@rgmail.com</div>
+									<div class="">username</div>
+									<div class="text-gray-500">id number</div>
 								</div>
 							</div>
-						</td>
-						<td class="p-3">
-							Technology
-						</td>
-						<td class="p-3 font-bold">
-							200.00$
-						</td>
-						<td class="p-3">
-							<span class="bg-yellow-400 text-gray-50  rounded-md px-2">start sale</span>
 						</td>
 						<td class="p-3">
 							<a href="#" class="text-gray-400 hover:text-gray-100 mr-2">
@@ -255,7 +231,7 @@ Change class "fixed" to "sticky" in "navbar" (l. 33) so the navbar doesn't hide 
 
 
 <!-- script of navbar and sidebar start -->
-<script type="text/javascript">
+{{!-- <script type="text/javascript">
 document.addEventListener("DOMContentLoaded", function() {
     var navbar = document.getElementById("navbar");
     var sidebar = document.getElementById("sidebar");
@@ -272,5 +248,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
     sidebar.style.top = parseInt(navbar.clientHeight) - 1 + "px";
 });
-</script>
+</script> --}}
 <!-- script of navbar and sidebar start -->
