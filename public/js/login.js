@@ -3,15 +3,15 @@ const uuid = require("../../utils/uuid");
 // handle login
 async function signUpFormHandler(event) {
   event.preventDefault();
-  // collect values from the login form
-  const username = document.querySelector("#username-login").value.trim();
-  const email = document.querySelector("#email-login").value.trim();
-  const password = document.querySelector("#password-login").value.trim();
-  const randomId = uuid.v4();
+  // collect values from the login signup form
+  const username = document.querySelector("#username-signup").value.trim();
+  const email = document.querySelector("#email-signup").value.trim();
+  const password = document.querySelector("#password-signup").value.trim();
+  const randomId = uuid();
 
   if (username && email && password) {
     // send a POST request to the API endpoint
-    const response = await fetch("/api/users/login", {
+    const response = await fetch("/api/users", {
       method: "post",
       body: JSON.stringify({
         username,
