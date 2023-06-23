@@ -11,8 +11,10 @@ router.get("/", async (req, res) => {
         },
       ],
     });
-    const users = userData.map((user) => user.get({plain: true}));
-    res.status(200).json(users);
+
+    const users = userData.map((user) => user.get({ plain: true }));
+    res.render('homepage', { users });
+
   } catch (err) {
     res.status(500).json(err);
   }
