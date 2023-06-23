@@ -7,7 +7,12 @@ User.hasMany(Category, {
     onDelete: 'CASCADE'
 });
 
-Category.hasMany(Product, {
+// Category.hasMany(Product, {
+//     foreignKey: 'category_name',
+//     onDelete: 'CASCADE'
+// });
+
+Product.belongsTo(Category, {
     foreignKey: 'category_name',
     onDelete: 'CASCADE'
 });
