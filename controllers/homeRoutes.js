@@ -18,22 +18,8 @@ router.get("/", async (req, res) => {
   }
 });
 
-// router.get('/buds', async function(req, res) {
-// try {
-//     const categories = await Category.findAll()
-//     console.log(categories);
-//     const parseData = categories.map((category) => category.get({plain:true}));
-//     console.log(parseData);
-//     res.render('buds', {parseData})
-// } catch (error) {
-//     res.json(error)
-// }
-// })
-
 
 router.get('/bets', function(req, res) {
-  // const nums = [{value:1},{value:2}]
-    // res.render('bets', {nums})
     res.render('bets');
 }) 
 
