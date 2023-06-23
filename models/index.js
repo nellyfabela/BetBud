@@ -1,10 +1,10 @@
-const User = require('./User');
-const Category = require('./Category');
-const Product = require('./Product');
+const User = require("./User");
+const Category = require("./Category");
+const Product = require("./Product");
 
 User.hasMany(Category, {
-    foreignKey: 'user_id',
-    onDelete: 'CASCADE'
+  foreignKey: "user_id",
+  onDelete: "CASCADE",
 });
 
 // Category.hasMany(Product, {
@@ -13,8 +13,8 @@ User.hasMany(Category, {
 // });
 
 Product.belongsTo(Category, {
-    foreignKey: 'category_name',
-    onDelete: 'CASCADE'
+  foreignKey: "category_name",
+  onDelete: "CASCADE",
 });
 
 module.exports = { User, Category, Product };
