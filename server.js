@@ -6,7 +6,7 @@ const routes = require('./controllers');
 const exphbs = require('express-handlebars');
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
-const hbs = exphbs.create({})
+const hbs = exphbs.create({}) // added the constant
 
 const app = express();
 const sess = {
@@ -20,7 +20,7 @@ const sess = {
 };
 
 app.use(session(sess));
-app.engine('handlebars',hbs.engine);
+app.engine('handlebars',hbs.engine); // modified this line according to the constant added above
 app.set('view engine', 'handlebars');
 
 app.use(express.json());
@@ -34,4 +34,4 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening'));
 });
-
+   
