@@ -14,6 +14,8 @@ router.get("/", async (req, res) => {
 
     const users = userData.map((user) => user.get({ plain: true }));
     res.render('homepage', { users });
+    // res.status(200).json(users);
+    
 
   } catch (err) {
     res.status(500).json(err);
@@ -22,11 +24,11 @@ router.get("/", async (req, res) => {
 
 
 router.get('/bets', function(req, res) {
-    res.render('bets');
+  res.render('bets');
 }) 
 
 router.get('/buds', function(req, res) {
-    res.render('buds');
+  res.render('buds');
 }) 
 
 router.get('/createbet', function(req, res) {
