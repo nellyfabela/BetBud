@@ -1,0 +1,18 @@
+[
+    {
+        "product_name": "Cooked Potato",
+        "category_name": "Dish"
+    },
+    {
+        "product_name": "Tickets for the movie",
+        "category_name": "Cinema"
+    },
+    {
+        "product_name": "10 bucks",
+        "category_name": "Cash"
+    },
+    {
+        "product_name": "Coca Cola",
+        "category_name": "Drink"
+    }
+]
