@@ -1,0 +1,37 @@
+<div>
+    <h3> My profile </h3>
+    {{!-- substitute user.avatar with the propper naming of the variable where the user img will be stored --}}
+    <img src="{{user.avatar}}" alt="avatar" style="width: 571px; height: 571px;" class="rounded-full">
+    <h1>{{user.username}}</h1>
+
+    <p>{{user.description}}</p>
+
+    <h3>BETS</h3>
+    <div>
+    {{#each bets as |bet| }}
+   {{!-- create a row of spaced boxes with rounded edges each with content from bets --}}
+    <div class="flex flex-row justify-between">
+        <div class="flex flex-col justify-center items-center bg-gray-200 rounded-lg p-4 m-4">
+            <h3>{{bet.title}}</h3>
+            <p>{{bet.description}}</p>
+            <p>{{bet.amount}}</p>
+            <p>{{bet.date}}</p>
+            <p>{{bet.status}}</p>
+        </div>
+    </div>
+    {{/each}}
+    </div>
+
+     <h3>AWARDS</h3>
+    <div>
+    {{#each bets as |bet| }}
+   {{!-- create a row of spaced boxes with rounded edges each with content from bets --}}
+    <div class="flex flex-row justify-between">
+        <div class="flex flex-col justify-center items-center bg-gray-200 rounded-lg p-4 m-4">
+            <h3>{{bet.title}}</h3>
+        </div>
+    </div>
+    {{/each}}
+    </div>
+
+</div>
