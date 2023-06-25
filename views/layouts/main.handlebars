@@ -12,6 +12,7 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link href="/dist/output.css" rel="stylesheet">
 
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
 </head>
 
 <body>
@@ -62,40 +63,46 @@
                             </h3>
                             <button id="btnSidebarHider" type="button"
                                 class="py-4 text-2xl text-white hover:text-gray-200">
-                                <svg id="navClosed" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="h-8 w-8">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                                </svg>
-                                <svg id="navOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="hidden h-8 w-8">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
+                                <lord-icon src="https://cdn.lordicon.com/zpcieyfp.json" trigger="hover"
+                                    colors="primary:#ffffff,secondary:#08a88a" stroke="100"
+                                    style="width:25px;height:25px" id="icoBtnSidebar">
+                                </lord-icon>
                             </button>
 
                             <ul class="mb-8 text-sm font-medium content-center">
                                 <li class="flex-row items-stretch">
-                                    <i class="lni lni-home justify-self-start self-center"></i>
+                                    <lord-icon src="https://cdn.lordicon.com/osuxyevn.json" trigger="morph"
+                                        colors="primary:#ffffff" state="morph-2" style="width:25px;height:25px"
+                                        id="icoHome">
+                                    </lord-icon>
                                     <a class="active flex rounded py-3 pl-4 pr-4 text-gray-50 hover:bg-gray-600"
                                         href="#homepage">
                                         <span class="select-none">Home</span>
                                     </a>
                                 </li>
                                 <li class="flex-row items-stretch">
-                                    <i class="lni lni-user justify-self-start self-center"></i>
+                                    <lord-icon src="https://cdn.lordicon.com/bhfjfgqz.json" trigger="hover"
+                                        colors="primary:#ffffff" style="width:25px;height:25px" id="icoProfile">
+                                    </lord-icon>
                                     <a class="flex rounded py-3 pl-4 pr-4 text-gray-50 hover:bg-gray-600" href="#link1">
                                         <span class="select-none">My profile</span>
                                     </a>
                                 </li>
                                 <li class="flex-row items-stretch">
-                                    <i class="lni lni-users justify-self-start self-center"></i>
+                                    <lord-icon src="https://cdn.lordicon.com/gbxgskdd.json" trigger="hover"
+                                        colors="primary:#ffffff" state="hover" style="width:25px;height:25px"
+                                        id="icoBuds">
+                                    </lord-icon>
                                     <a class="flex  rounded py-3 pl-4 pr-4 text-gray-50 hover:bg-gray-600"
                                         href="#link1">
                                         <span class="select-none">My buds</span>
                                     </a>
                                 </li>
                                 <li class="flex-row items-stretch">
-                                    <i class="lni lni-ticket justify-self-start self-center"></i>
+                                    <lord-icon src="https://cdn.lordicon.com/itnlluqc.json" trigger="hover"
+                                        colors="primary:#ffffff" state="hover" style="width:25px;height:25px"
+                                        id="icoBets">
+                                    </lord-icon>
                                     <a class="flex rounded py-3 pl-4 pr-4 text-gray-50 hover:bg-gray-600" href="#link1">
                                         <span class="select-none">My bets</span>
                                     </a>
