@@ -3,18 +3,21 @@
     "username": "Hector",
     "email": "hector@gmail.com",
     "password": "abc123",
-    "user_id": "hector1"
+    "user_id": "hector1",
+    "avatar": "https://picsum.photos/600"
   },
   {
     "username": "Jonathan",
     "email": "jonathan@gmail.com",
     "password": "abc123",
-    "user_id": "jona12"
+    "user_id": "jona12",
+    "avatar": "https://picsum.photos/600"
   },
   {
     "username": "Raymundo",
     "email": "raymundo@gmail.com",
     "password": "abc123",
-    "user_id": "ray123"
+    "user_id": "ray123",
+    "avatar": "https://picsum.photos/600"
   }
 ]
