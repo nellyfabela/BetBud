@@ -14,7 +14,8 @@ router.get("/", async (req, res) => {
     });
 
     const users = userData.map((user) => user.get({ plain: true }));
-    res.render('homepage', { users });
+    console.log(users); //to check the content of the object
+    res.render('homepage', { users, logged_in: true }); //test for logged in user
     // res.status(200).json(users);
  
     
