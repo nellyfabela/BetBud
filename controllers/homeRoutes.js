@@ -62,4 +62,12 @@ router.get('/profile', async (req, res) => {
 
 })
 
+router.get('/home', function(req, res) {
+  res.render('home');
+})
+
+router.get('/signup', function(req, res) {
+  res.render('signup');
+})
+
 module.exports = router;
