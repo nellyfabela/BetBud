@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "category_name": "sports",
+        "product_name": "dish",
+        "user_id": 1
+    },
+    {
+        "id": 2,
+        "category_name": "cinema",
+        "product_name": "dish",
+        "user_id": 3
+    },
+    {
+        "id": 3,
+        "category_name": "sports",
+        "product_name": "drink",
+        "user_id": 2
+    },
+    {
+        "id":4,
+        "category_name": "school",
+        "product_name": "giftcard",
+        "user_id": 1
+    }
+]
