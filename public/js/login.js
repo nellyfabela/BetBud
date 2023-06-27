@@ -1,4 +1,6 @@
-const uuid = require("../../utils/uuid");
+const sigunpForm = document.querySelector('#sign-up-form');
+const cancelBtn = document.querySelector('#cancel-btn');
+console.log('you made it')
 
 // handle login
 async function login(event) {
@@ -10,7 +12,7 @@ async function login(event) {
   if (email && password) {
     // send a POST request to the API endpoint
     const response = await fetch("/api/users/login", {
-      method: "post",
+      method: "POST",
       body: JSON.stringify({
         email,
         password,
@@ -27,23 +29,23 @@ async function login(event) {
 }
 
 // handle signup
-async function signUp(event) {
+async function signUp (event) {
   event.preventDefault();
   // collect values from the login signup form
   const username = document.querySelector("#username-signup").value.trim();
   const email = document.querySelector("#email-signup").value.trim();
   const password = document.querySelector("#password-signup").value.trim();
-  const randomId = uuid();
+  const user_id = uuid();
 
   if (username && email && password) {
     // send a POST request to the API endpoint
     const response = await fetch("/api/users", {
-      method: "post",
+      method: "POST",
       body: JSON.stringify({
         username,
         email,
         password,
-        randomId,
+        user_id,
       }),
       headers: { "Content-Type": "application/json" },
     });
@@ -61,6 +63,8 @@ document
   .querySelector(".login-form")
   .addEventListener("submit", login);
 
-document
-  .querySelector(".signup-form")
-  .addEventListener("submit", signUp);
+sigunpForm.addEventListener('submit', signUp);
+
+cancelBtn.addEventListener('click', () => {
+  document.location.replace('/')
+});

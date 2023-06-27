@@ -19,6 +19,7 @@ User.init(
     username: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
     },
     email: {
       type: DataTypes.STRING,
@@ -38,6 +39,10 @@ User.init(
     user_id: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    avatar: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
   },
   {

@@ -1,0 +1,56 @@
+<div>
+    <h3> My profile </h3>
+    <div class="flex flex-col divide-y">
+        <h3>Edit information</h3>
+        <div>
+            {{!-- TODO: Make the overlaid image a clickable element to prompt the user to select a new user avatar--}}
+            <div class="rounded-full">
+                <lord-icon src="https://cdn.lordicon.com/ivdatglx.json" trigger="hover" colors="primary:#ffffff"
+                    state="intro" style="width:50px;height:50px">
+                </lord-icon>
+
+                <img src="{{user.avatar}}" alt="avatar" style="width: 571px; height: 571px;" class="rounded-full">
+            </div>
+            {{!-- separate in another division to only have one divider --}}
+            <div class="flex flex-col ">
+                {{!-- From to collect and show the data --}}
+                {{!-- TODO: Change action for valid method to post changes in db --}}
+                <form action="/login" method="post"> 
+                    
+                    <div class="text-center grid-cols-2">
+                        <div class="inline-flex gap-8 m-4 pe-10">
+                            <label class="pe-10">User Name:</label>
+                            <input class="bg-black text-white border-2 border-yellow-500" type="text" name="username" />
+                        </div>
+                    </div>
+
+                    <div class="text-center grid-cols-2">
+                        <div class="inline-flex gap-20 m-4 pe-10">
+                            <label>Mail:</label>
+                            <input class="bg-black text-white border-2 border-yellow-500" type="text" name="email" />
+                        </div>
+                    </div>
+
+                    <div class="text-center grid-cols-2">
+                        <div class="inline-flex m-4 gap-10 pe-10">
+                            <label>Password:</label>
+                            <input class="bg-black text-white border-2 border-yellow-500" type="password"
+                                name="password" />
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="inline-flex space-x-10 m-10">
+                            <input class="btn btn-primary bg-black text-white border w-24 h-10 border-yellow-500"
+                                type="submit" value="Cancel" />
+                            <input class="btn btn-primary bg-black text-white border w-24 h-10 border-yellow-500"
+                                type="submit" value="Log In" />
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
