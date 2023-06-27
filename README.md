@@ -1,8 +1,8 @@
-# Bet Bud - A Social Bettig Sport Platform.
+# Bet Bud - A Social Bettig Friendly Platform.
 
 ## Description
 
-Bet Bud is a social network platform aimed at sports betting. The idea is that people join this platform and can, as in a social network, interact with other users to place bets on a particular sporting event. The prizes of the bets to win are: a meal, a drink, some movie tickets or cash.
+Bet Bud is a social network platform aimed at friendly betting. The idea is that people join this platform and can, as in a social network, interact with other users to place bets on a particular event. The prizes of the bets to win are: a meal, a drink, some movie tickets or cash.
 The user must register on the platform, have access to it, invite and connect with friends, and place bets among their friends.
 We decided to build this project as we believe that the social networks tend to be more specialized to certain subjects, as for example, there are networks for pictures, for news, for jobs, etc. So then we think that there is a market in which sport betting as social network can be a great project to develop.
 
@@ -47,7 +47,7 @@ For encryption we used bcrypt
 
 ## How to Contribute
 
-For contributing, we encourage other programmers to provide ideas on how to improve the application.
+For contributing, we encourage other programmers to provide ideas on how to improve the application. Also we encourage programmers to provide ideas on how to specialize the betting social platform.
 
 ## Tests
 
