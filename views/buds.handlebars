@@ -1,7 +1,7 @@
 
-<header class="flex absolute items-center top-0 justify-center h-16 z-40 bg-black">
-  <h3 class="text-white text-lg">My buds</h3>
-</header>
+<div class="flex flex-col justify-center my-16">
+  <h3 class="flex flex-col text-white text-5xl justify-center self-center">My buds</h3>
+</div>
 
 {{!-- {{#each parseData}}
 <div> {{id}} </div>
@@ -12,8 +12,9 @@
 <!--bud searchbar start-->
 
 <div class="relative text-lg bg-transparent text-gray-800">
-  <div class="flex items-center border-b-2 border-teal-500 py-2">
-	<input class="bg-transparent border-none mr-3 px-2 leading-tight focus:outline-none" type="text" placeholder="Add a new bud by id number...">
+  <div class="flex items-center border-b-2 border-yellow-500 shadow-xl 
+  hover:shadow-yellow-500/60 py-2 w-full">
+	<input class="bg-transparent border-none w-full mr-3 px-2 leading-tight focus:outline-none" type="text" placeholder="Add a new bud by id number...">
 	<button type="submit" class="absolute right-0 top-0 mt-3 mr-4">
 
       <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve" width="512px" height="512px">
@@ -30,25 +31,25 @@
 <link
 	href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
 	rel="stylesheet">
-<div class="flex items-center justify-center min-h-screen bg-neutral-950">
-	<div class="col-span-12">
-		<div class="overflow-auto lg:overflow-visible ">
-			<table class="table text-gray-400 border-separate space-y-6 text-sm">
+<div class="flex flex-col relative items-center justify-center min-h-screen bg-neutral-950">
+	<div class="w-1/2 absolute justify-center  ">
+		<div class="overflow-auto lg:overflow-visible w-full">
+			<table class="table text-gray-400 border-separate space-y-6 text-sm w-full">
 				<tbody>
 					<tr class="bg-gray-800">
 						<td class="p-3">
 							<div class="flex align-items-center">
-								<div class="ml-3">
-                                    {{each #parseData}}
-									<div class="">{{user_username}}</div>
-									<div class="text-gray-500">{{user_id}}</div>
+								<div class="ml-3 rounded-full">
+									<div class="">username</div>
+									<div class="text-gray-500">id number</div>
 								</div>
 							</div>
 						</td>
-						<td class="p-3 ">
+						<td class="flex p-3 justify-end mt-3">
 							<a href="#" class="text-gray-400 hover:text-gray-100 mr-2">
 								<i class="material-icons-outlined text-base">visibility</i>
 							</a>
+							{{!-- TODO add link to editBet page (needs creating) --}}
 							<a href="#" class="text-gray-400 hover:text-gray-100  mx-2">
 								<i class="material-icons-outlined text-base">edit</i>
 							</a>
@@ -66,7 +67,7 @@
 								</div>
 							</div>
 						</td>
-						<td class="p-3">
+						<td class="flex p-3 justify-end mt-3">
 							<a href="#" class="text-gray-400 hover:text-gray-100  mr-2">
 								<i class="material-icons-outlined text-base">visibility</i>
 							</a>
@@ -87,7 +88,7 @@
 								</div>
 							</div>
 						</td>
-						<td class="p-3">
+						<td class="flex p-3 justify-end mt-3">
 							<a href="#" class="text-gray-400 hover:text-gray-100 mr-2">
 								<i class="material-icons-outlined text-base">visibility</i>
 							</a>
