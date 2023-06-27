@@ -4,6 +4,7 @@ const sequelize = require('../config/connection');
 class Bet extends Model {}
 
 Bet.init(
+
     {
         id: {
             type: DataTypes.INTEGER,
@@ -41,6 +42,7 @@ Bet.init(
         //     },
         // ]
     },
+
 );
 
 module.exports = Bet;

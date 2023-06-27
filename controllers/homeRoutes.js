@@ -26,7 +26,8 @@ router.get('/login', async (req, res) => {
     }
 });
 
-router.get('/profile', withAuth, async (req, res) => {
+// TODO - add withAuth to this route router.get('/profile', withAuth, async (req, res) => {
+router.get('/profile', async (req, res) => {
     try {
         res.render('profile');
     } catch (err) {
@@ -37,6 +38,30 @@ router.get('/profile', withAuth, async (req, res) => {
 router.get('/createbet', withAuth, async (req, res) => {
     try {
         res.render('createbet');
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
+router.get('/buds', async (req, res) => {
+    try {
+        res.render('buds');
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
+router.get('/createbet', async (req, res) => {
+    try {
+        res.render('createbet');
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
+router.get('/editprofile', async (req, res) => {
+    try {
+        res.render('editprofile');
     } catch (err) {
         res.status(500).json(err);
     }
