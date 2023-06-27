@@ -4,44 +4,45 @@ const sequelize = require('../config/connection');
 class Bet extends Model {}
 
 Bet.init(
-  {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
+
+    {
+        id: {
+            type: DataTypes.INTEGER,
+            autoIncrement: true,
+            primaryKey: true, 
+            allowNull: false,
+        },
+        category_name: {
+            type: DataTypes.STRING,
+            allowNull: false, 
+        },
+        product_name: {
+            type: DataTypes.STRING,
+            allowNull: false, 
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'user',
+                key: 'id'
+            },
+        },
     },
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false,
+    {
+        sequelize, 
+        timestamps: false, 
+        freezeTableName: true, 
+        underscored: true, 
+        modelName: 'bet'
+        // indexes: [
+        //     {
+        //         unique: true,
+        //         fields: ['user_usnm'],
+        //         name: 'idx_user',
+        //     },
+        // ]
     },
-    description: {
-      type: DataTypes.STRING,
-    },
-    status: {
-        type: DataTypes.BOOLEAN,
-        allowNull: true,
-    },
-    date_created: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id',
-      },
-    },
-  },
-  {
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'project',
-  }
+
 );
 
 module.exports = Bet;

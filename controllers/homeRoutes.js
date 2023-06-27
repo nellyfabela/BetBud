@@ -33,6 +33,14 @@ router.get('/profile', async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
+});
+
+router.get('/createbet', withAuth, async (req, res) => {
+    try {
+        res.render('createbet');
+    } catch (err) {
+        res.status(500).json(err);
+    }
 })
 
 router.get('/buds', async (req, res) => {
