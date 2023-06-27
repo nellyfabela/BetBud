@@ -1,7 +1,6 @@
 const Category = require("./Category");
 const User = require("./User");
 const Product = require("./Product");
-
 const Bet = require('./Bet');
 
 
