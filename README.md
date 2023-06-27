@@ -1,4 +1,4 @@
-# Bet Bud - A bettig sport platform.
+# Bet Bud - A Social Bettig Sport Platform.
 
 ## Description
 
