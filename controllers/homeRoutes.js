@@ -4,17 +4,17 @@ const { findAll, findByPk } = require('../models/User');
 
 router.get("/", async (req, res) => {
   try {
-    const userData = await User.findAll({
-      include: [
-        {
-          model: Category,
-          attributes: ["category_name"],
-        },
-      ],
-    });
+    // const userData = await User.findAll({
+    //   include: [
+    //     {
+    //       model: Category,
+    //       attributes: ["category_name"],
+    //     },
+    //   ],
+    // });
 
-    const users = userData.map((user) => user.get({ plain: true }));
-    console.log(users); //to check the content of the object
+    // const users = userData.map((user) => user.get({ plain: true }));
+    // console.log(users); //to check the content of the object
     res.render('home'); //test for logged in user
     // res.status(200).json(users);
  

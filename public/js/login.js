@@ -60,7 +60,7 @@ async function signUp (event) {
 
 // event listeners for login and signup
 document
-  .querySelector(".login-form")
+  .querySelector("#login-form")
   .addEventListener("submit", login);
 
 sigunpForm.addEventListener('submit', signUp);
