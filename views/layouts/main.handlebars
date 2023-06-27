@@ -16,6 +16,11 @@
 </head>
 
 <body>
+    {{#if logged_in}}
+    <h1 style="color: white">YOOOO</h1>
+    {{else}}
+    <h1 style="color: white">YOOO NOT </h1>
+    {{/if}}
     <div class=" bg-neutral-950 h-screen">
         <header class="static">
             <h1>
@@ -48,7 +53,7 @@
                         class="flex left-0 w-fit min-h-full flex-col overflow-y-auto justify-items-center align-middle bg-neutral-950 pt-6 pb-8 lg:h-full">
 
                         <!-- Conditionally render login or logout links -->
-                        {{#if logged_in}}
+                        
                         <!-- one category / navigation group -->
                         <div class="flex-col px-4 pb-6 justify-items-center">
                             <h3 class="mb-2 text-xs font-medium uppercase text-gray-500">
@@ -107,12 +112,12 @@
                             <lord-icon src="https://cdn.lordicon.com/abxklwuk.json" trigger="hover"
                                 colors="primary:#ffffff" state="hover" style="width:50px;height:50px" class="ml-1">
                             </lord-icon>
-                            <a class="self-center ml-4">Logout</a>
+                            <a class="self-center ml-4" id="logout">Logout</a>
                         </button>
-                        {{else}}
+                        
                         {{!-- Change the link for the updated URL for LOGIN --}}
                         <a href="/login">Login</a>
-                        {{/if}}
+                        
                     </nav>
                 </div>
                 <div class="mx-auto lg:ml-80"></div>
@@ -144,15 +149,15 @@
         });
 
         var hideButton = document.getElementById('btnSidebarHider');
-        hideButton.addEventListener('click', function () {
+        hideButton?.addEventListener('click', function () {
             sidebar.classList.add('hidden');
         });
     </script>
 
     <!-- Render script for logged in users only -->
-    {{#if logged_in}}
-    <script src="/js/logout.js"></script>
-    {{/if}}
+   
+    <script src="./js/logout.js"></script>
+   
 </body>
 
 </html>
