@@ -17,6 +17,7 @@ const seedDatabase = async () => {
 
   await Category.bulkCreate(categoryData);
   await Product.bulkCreate(productData);
+  await Product.bulkCreate(betData);
 
   process.exit(0);
 };
