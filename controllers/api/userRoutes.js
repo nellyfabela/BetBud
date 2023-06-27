@@ -6,8 +6,9 @@ router.post('/', async (req, res) => {
         console.log('req body' , req.body);
         const userData = await User.create(req.body);
         req.session.save(() => {
-            req.session.username = userData.username;
+            req.session.user_id = userData.id;
             req.session.logged_in = true;
+            
             res.status(200).json(userData);
           });
     } catch (err) {
@@ -19,6 +20,8 @@ router.get('/', async (req, res) => {
     try {
         const userData = await User.findAll();
         res.status(200).json(userData);
+//test
+        console.log("Got here");
     } catch (err) {
         res.status(500).json(err)
     }
@@ -26,7 +29,7 @@ router.get('/', async (req, res) => {
 
 router.post('/login', async (req, res) => {
     try {
-        const userData = await User.findOne({ where: { username: req.body.username }});
+        const userData = await User.findOne({ where: { email: req.body.email }});
 
         if(!userData) {
             res.status(400).json({ message: 'Incorrect email or password, please try again '});
@@ -41,14 +44,16 @@ router.post('/login', async (req, res) => {
         }
 
         req.session.save(() => {
-            req.session.user_id = userData.id;
+            req.session.user_id = userData.id; 
             req.session.logged_in = true,
+            console.log('logged in');
 
             res.json({ user: userData, message: 'You are now logged in'});
         });
 
     } catch (err) {
-
+        res.status(400).json(err);
+        console.log('error');
     }
 });
 
