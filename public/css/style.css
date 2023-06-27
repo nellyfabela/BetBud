@@ -23,7 +23,11 @@ ul.breadcrumb li span {
     transform: translateX(0);
 }
 
-#sidebar ul li a.active {
+/* #sidebar ul li a.active {
     background: #1f2937;
     background-color: #1f2937;
+} */
+
+div {
+    color: white;
 }

@@ -1,49 +1,50 @@
 <div>
-            <img  class="w-full h-20" src="/tophome.png">
+            <img  class="w-full h-20" src="./images/tophome.png">
         </div>
 
         <div class="w-32 flex justify-center items-center place-content-center"> <!--falta acomodar la imagen al medio -->
-            <img src="Logo2.png">
+            <img src="./images/Logo2.png">
         </div>
 
-        <div class="text-center my-8">
-            <h1>Welcome to BetBud!<br><br>Fill out this form to create your account<br>to start having fun with your buds.</h1>
+        <div class="text-center my-16 text-3xl sm:text-5xl">
+            <h1>Welcome to BetBud!</h1>
+            <h2 class="pt-20 text-lg sm:text-xl">✨ Please enter your credentials ✨</h2>
         </div>
 
         <div class="text-center">
             
-                <form id="sign-up-form" style="color: white">
+                <form id="sign-up-form" style="color: white" class="flex flex-col items-center ">
             
 
                 <div class="text-center grid-cols-2">
                     <div class="inline-flex gap-8 m-4 pe-10">
-                        <label class="pe-10">User Name:</label>
-                        <input class="bg-black text-white border-2 border-yellow-500" type="text" name="username"/>
+                        <label class="text-md sm:text-xl">User Name:</label>
+                        <input class="bg-black text-white border-2 border-yellow-500 caret-pink-600 hover:border-pink-600 hover:shadow-lg hover:shadow-pink-600/40" type="text" name="username" id="signup-username"/>
                     </div>
                 </div>
 
                 <div class="text-center grid-cols-2">
                     <div class="inline-flex gap-20 m-4 pe-10">
-                        <label>Mail:</label>
-                        <input class="bg-black text-white border-2 border-yellow-500" type="text" name="mail"/>
+                        <label class="text-md sm:text-xl">Mail:</label>
+                        <input class="bg-black text-white border-2 border-yellow-500 caret-pink-600 hover:border-pink-600 hover:shadow-lg hover:shadow-pink-600/40" type="text" name="mail" id="signup-email"/>
                     </div>
                 </div>
 
                  <div class="text-center grid-cols-2">
                     <div class="inline-flex m-4 gap-10 pe-10">
-                        <label>Password:</label>
-                        <input class="bg-black text-white border-2 border-yellow-500" type="password" name="password"/>
+                        <label class="text-md sm:text-xl">Password:</label>
+                        <input class="bg-black text-white border-2 border-yellow-500 caret-pink-600 hover:border-pink-600 hover:shadow-lg hover:shadow-pink-600/40" type="password" name="password" id="signup-password"/>
                     </div>
                 </div>
                 
                 <div class="text-center">
                     <div class="inline-flex space-x-10 m-10">
-                        <button class="btn btn-primary bg-black text-white border w-24 h-10 border-yellow-500" type="submit" id="cancel-btn">Cancel</button>
-                        <button class="btn btn-primary bg-black text-white border w-24 h-10 border-yellow-500" type="submit" id="sign-btn">Sign up</button>
+                        <button class="btn btn-primary bg-black text-white border w-24 h-10 border-yellow-500 shadow-md shadow-yellow-400/50 cursor-pointer hover:border-red-600 hover:shadow-xl hover:shadow-red-600/60 place-self-center p-1" type="submit" id="cancel-btn">Cancel</button>
+                        <button class="btn btn-primary bg-black text-white border w-24 h-10 border-yellow-500 shadow-md shadow-yellow-400/50 cursor-pointer hover:border-lime-500 hover:shadow-xl hover:shadow-lime-500/60 place-self-center p-1" type="submit" id="sign-btn">Sign up</button>
                     </div>
                 </div>
 
-                <div class="text-center my-8">
+                <div class="text-center my-8 text-sm sm:text-lg">
                     <h1>Your ID will be automatically generated<br>and appear in My Profile once logged in.</h1>
                 </div>
 
@@ -51,4 +52,4 @@
             </div>          
     </div>
 
-    <script src="./js/login.js"></script>
+ <script src="./js/signup.js"></script>

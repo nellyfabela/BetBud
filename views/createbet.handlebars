@@ -21,24 +21,24 @@ body {
   <h3 class="text-white text-center mb-8">What are you betting over?</h3>
   <div class="flex">
     <div class="checkbox-container bg-black">
-      <input type="checkbox" id="choose-me1" class="peer hidden" />
-      <label for="choose-me1" class="select-none cursor-pointer rounded-lg border-2 border-gray-200
+      <input value="sports" type="checkbox" id="choose-me1" class="peer hidden" />
+      <label  for="choose-me1" class="select-none cursor-pointer rounded-lg border-2 border-gray-200
         py-3 px-6 font-bold text-gray-200 transition-colors duration-200 ease-in-out
         peer-checked:bg-natural-950 peer-checked:text-gray-900 peer-checked:border-gray-200">
         Sports
       </label>
     </div>
     <div class="checkbox-container bg-natural-950">
-      <input type="checkbox" id="choose-me2" class="peer hidden" />
-      <label for="choose-me2" class="select-none cursor-pointer rounded-lg border-2 border-gray-200
+      <input value="cinema" type="checkbox" id="choose-me2" class="peer hidden" />
+      <label  for="choose-me2" class="select-none cursor-pointer rounded-lg border-2 border-gray-200
         py-3 px-6 font-bold text-gray-200 transition-colors duration-200 ease-in-out
         peer-checked:bg-natural-950 peer-checked:text-gray-900 peer-checked:border-gray-200">
         Cinema
       </label>
     </div>
     <div class="checkbox-container bg-natural-950">
-      <input type="checkbox" id="choose-me3" class="peer hidden" />
-      <label for="choose-me3" class="select-none cursor-pointer rounded-lg border-2 border-gray-200
+      <input value="school" type="checkbox" id="choose-me3" class="peer hidden" />
+      <label  for="choose-me3" class="select-none cursor-pointer rounded-lg border-2 border-gray-200
         py-3 px-6 font-bold text-gray-200 transition-colors duration-200 ease-in-out
         peer-checked:bg-natural-950 peer-checked:text-gray-900 peer-checked:border-gray-200">
         School
@@ -55,7 +55,7 @@ body {
   <h3 class="text-white text-center mb-8">What are you betting?</h3>
   <div class="flex">
     <div class="checkbox-container bg-black">
-      <input type="checkbox" id="choose-me4" class="peer hidden" />
+      <input value="dish" type="checkbox" id="choose-me4" class="peer hidden" />
       <label for="choose-me4" class="select-none cursor-pointer rounded-lg border-2 border-gray-200
         py-3 px-6 font-bold text-gray-200 transition-colors duration-200 ease-in-out
         peer-checked:bg-black-200 peer-checked:text-gray-900 peer-checked:border-gray-200">
@@ -63,7 +63,7 @@ body {
       </label>
     </div>
     <div class="checkbox-container bg-black">
-      <input type="checkbox" id="choose-me5" class="peer hidden" />
+      <input value="cinema" type="checkbox" id="choose-me5" class="peer hidden" />
       <label for="choose-me5" class="select-none cursor-pointer rounded-lg border-2 border-gray-200
         py-3 px-6 font-bold text-gray-200 transition-colors duration-200 ease-in-out
         peer-checked:bg-black-200 peer-checked:text-gray-900 peer-checked:border-gray-200">
@@ -71,7 +71,7 @@ body {
       </label>
     </div>
     <div class="checkbox-container bg-black">
-      <input type="checkbox" id="choose-me6" class="peer hidden" />
+      <input value="giftcard" type="checkbox" id="choose-me6" class="peer hidden" />
       <label for="choose-me6" class="select-none cursor-pointer rounded-lg border-2 border-gray-200
         py-3 px-6 font-bold text-gray-200 transition-colors duration-200 ease-in-out
         peer-checked:bg-black-200 peer-checked:text-gray-900 peer-checked:border-gray-200">
@@ -79,8 +79,8 @@ body {
       </label>
     </div>
     <div class="checkbox-container bg-black">
-      <input type="checkbox" id="choose-me4" class="peer hidden" />
-      <label for="choose-me4" class="select-none cursor-pointer rounded-lg border-2 border-gray-200
+      <input value="drink" type="checkbox" id="choose-me7" class="peer hidden" />
+      <label for="choose-me7" class="select-none cursor-pointer rounded-lg border-2 border-gray-200
         py-3 px-6 font-bold text-gray-200 transition-colors duration-200 ease-in-out
         peer-checked:bg-black-200 peer-checked:text-gray-900 peer-checked:border-gray-200">
         Drink
@@ -90,7 +90,7 @@ body {
 </div>
 
 <div class="relative text-lg bg-transparent text-gray-800">
-  <div class="flex items-center border-b border-b-2 border-teal-500 py-2">
+  <div class="flex items-center border-b-2 border-teal-500 py-2">
 	<input class="bg-transparent border-none mr-3 px-2 leading-tight focus:outline-none" type="text" placeholder="Look for a bud to invite...">
 	<button type="submit" class="absolute right-0 top-0 mt-3 mr-4">
       <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve" width="512px" height="512px">
@@ -150,10 +150,12 @@ body {
 </style>
 
 <div class="flex justify-center items-center h-screen">
-  <button class="flex shadow w-32 block border-blue-600 border-2 rounded-full focus:outline-none focus:border-blue-600 px-4 py-2 text-blue-600 hover:bg-blue-600 hover:text-white">
+  <button id="bet-btn" class="flex shadow w-32 border-blue-600 border-2 rounded-full focus:outline-none focus:border-blue-600 px-4 py-2 text-blue-600 hover:bg-blue-600 hover:text-white">
     <span class="mx-auto">Create bet</span>
   </button>
 </div>
+
+<script src="./js/createbet.js"></script>
 
 {{!-- checkbox for what are you betting end --}}
 
