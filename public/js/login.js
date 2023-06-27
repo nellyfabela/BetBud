@@ -1,70 +1,31 @@
-const sigunpForm = document.querySelector('#sign-up-form');
-const cancelBtn = document.querySelector('#cancel-btn');
-console.log('you made it')
+const signUpFormHandler = async (e) => {
 
-// handle login
-async function login(event) {
-  event.preventDefault();
-  // collect values from the login form
-  const email = document.querySelector("#email-login").value.trim();
-  const password = document.querySelector("#password-login").value.trim();
+  e.preventDefault();
 
-  if (email && password) {
-    // send a POST request to the API endpoint
-    const response = await fetch("/api/users/login", {
-      method: "POST",
-      body: JSON.stringify({
-        email,
-        password,
-      }),
-      headers: { "Content-Type": "application/json" },
+  const username = document.querySelector('#signup-username').value.trim();
+  const email = document.querySelector('#signup-email').value.trim();
+  const password = document.querySelector('#signup-password').value.trim();
+
+
+
+  if(username && email && password) {
+
+    const response = await fetch('/api/users', {
+      method: 'POST', 
+      body: JSON.stringify({ username, email, password }),
+      header: { 'Content-Type': 'application/json' },
     });
-    if (response.ok) {
-      // if successful, redirect the browser to the profile page
-      document.location.replace("/profile");
+    
+    
+
+    if(response.ok) {
+      document.location.replace('/');
     } else {
       alert(response.statusText);
+
     }
   }
-}
+};
 
-// handle signup
-async function signUp (event) {
-  event.preventDefault();
-  // collect values from the login signup form
-  const username = document.querySelector("#username-signup").value.trim();
-  const email = document.querySelector("#email-signup").value.trim();
-  const password = document.querySelector("#password-signup").value.trim();
-  const user_id = uuid();
-
-  if (username && email && password) {
-    // send a POST request to the API endpoint
-    const response = await fetch("/api/users", {
-      method: "POST",
-      body: JSON.stringify({
-        username,
-        email,
-        password,
-        user_id,
-      }),
-      headers: { "Content-Type": "application/json" },
-    });
-    if (response.ok) {
-      // if successful, redirect the browser to the profile page
-      document.location.replace("/profile");
-    } else {
-      alert(response.statusText);
-    }
-  }
-}
-
-// event listeners for login and signup
-document
-  .querySelector(".login-form")
-  .addEventListener("submit", login);
-
-sigunpForm.addEventListener('submit', signUp);
-
-cancelBtn.addEventListener('click', () => {
-  document.location.replace('/')
-});
+document.querySelector('#sign-up-form')
+    .addEventListener('submit', signUpFormHandler);
