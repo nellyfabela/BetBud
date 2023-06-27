@@ -15,7 +15,7 @@ router.get("/", async (req, res) => {
 
     const users = userData.map((user) => user.get({ plain: true }));
     console.log(users); //to check the content of the object
-    res.render('homepage', { users, logged_in: true }); //test for logged in user
+    res.render('home', { users, logged_in: true }); //test for logged in user
     // res.status(200).json(users);
  
     
@@ -25,6 +25,21 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get('/login', async (req, res) => {
+  try {
+    res.render('login');
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/signup', async (req, res) => {
+  try {
+    res.render('signup')
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
 
 router.get('/bets', function(req, res) {
   res.render('bets');
@@ -38,7 +53,7 @@ router.get('/createbet', function(req, res) {
   res.render('createbet');
 }) 
 
-router.get('/login', (req, res) => {
+router.get('/logout', (req, res) => {
   if(req.session.logged_in){
     req.session.destroy(() => {
       res.status(204).end();
