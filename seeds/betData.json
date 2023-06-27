@@ -1,0 +1,17 @@
+[
+    {
+      "title": "Bet #1",
+      "description": "Some awesome description",
+      "status": true
+    },
+    {
+      "title": "Bet #2",
+      "description": "Some awesome description",
+      "status": true
+    },
+    {
+      "title": "Bet #3",
+      "description": "Some awesome description",
+      "status": true
+    }
+  ]
