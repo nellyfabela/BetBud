@@ -1,6 +1,6 @@
-const uuid = require("../../utils/uuid");
 const sigunpForm = document.querySelector('#sign-up-form');
 const cancelBtn = document.querySelector('#cancel-btn');
+console.log('you made it')
 
 // handle login
 async function login(event) {
@@ -12,7 +12,7 @@ async function login(event) {
   if (email && password) {
     // send a POST request to the API endpoint
     const response = await fetch("/api/users/login", {
-      method: "post",
+      method: "POST",
       body: JSON.stringify({
         email,
         password,

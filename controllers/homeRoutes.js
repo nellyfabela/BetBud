@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const {User, Category} = require('../models');
-const { findAll, findByPk } = require('../models/User');
+const { findAll, findByPk } = require('../models/User'); 
 
 router.get("/", async (req, res) => {
   try {
@@ -15,7 +15,7 @@ router.get("/", async (req, res) => {
 
     const users = userData.map((user) => user.get({ plain: true }));
     console.log(users); //to check the content of the object
-    res.render('home', { users, logged_in: true }); //test for logged in user
+    res.render('home'); //test for logged in user
     // res.status(200).json(users);
  
     
