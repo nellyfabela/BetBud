@@ -36,14 +36,10 @@ User.init(
         len: [6],
       },
     },
-    user_id: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    avatar: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
+    // avatar: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true,
+    // },
   },
   {
     hooks: {
