@@ -8,8 +8,6 @@ We decided to build this project as we believe that the social networks tend to 
 
 ## Table of Contents (Optional)
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
@@ -21,15 +19,15 @@ For installation need HTML, Talwind, Javascript, NodeJS, Express, Handlebars, My
 
 ## Usage
 
-As usagem the application is easy to use.
+As usage the application is easy to use.
 
-Th user need to signup and after that the user can login into the app and start creating bets alog with his friends.
+The user need to signup and after that the user can login into the app and start creating bets alog with his friends.
 
 ![alt text](assets/images/screenshot.png)
 
 ## Credits
 
-List your collaborators:
+List of collaborators:
 
 Jonathan Cobos [jonathanAnC0bosR]
 Nelly Fabela [nellyfabela]
