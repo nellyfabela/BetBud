@@ -15,7 +15,7 @@
     <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
 </head>
 
-<body>
+<body class="scrollbar-hide">
 
     {{#if logged_in}}
     <h1 style="color: black">YOOOO</h1>
@@ -23,7 +23,7 @@
     <h1 style="color: black">YOOO NOT </h1>
     {{/if}}
 
-    <div class=" bg-neutral-950 h-screen">
+    <div class=" bg-neutral-950 h-full overflow-auto scrollbar-hide">
         <header class="static">
             <h1>
                 <a href="/" class="justify-self-center">BetBud</a>
@@ -132,7 +132,7 @@
             {{{body}}}
         </main>
 
-        <footer>
+        <footer class="bg-neutral-950">
 
         </footer>
     </div>
