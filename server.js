@@ -35,7 +35,11 @@ app.use(session(sess));
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
-
+app.use((req, res, next) => {
+    res.locals.logged_in = req.session.logged_in;
+    next();
+  });
+  
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
