@@ -32,12 +32,12 @@ The user can invite their buds to bet depending on what they want as well as kno
 
 List of collaborators:
 
-Jonathan Cobos [jonathanAnC0bosR]
-Nelly Fabela [nellyfabela]
-Isabella Ruiz [isanator2000]
-Hector Dominguez [HectorHJDH]
-Jesus Mondragon [le-shush]
-Raymundo Ponce [rponce23]
+Jonathan Cobos [jonathanAnC0bosR] <br />
+Nelly Fabela [nellyfabela] <br />
+Isabella Ruiz [isanator2000] <br />
+Hector Dominguez [HectorHJDH] <br />
+Jesus Mondragon [le-shush] <br />
+Raymundo Ponce [rponce23] <br />
 
 ## Features
 
@@ -57,5 +57,5 @@ For contributing, we encourage other programmers to provide ideas on how to impr
 There are no current test in the project further than the test while coding and running tests along the coding, but it will be desireble to run further tests for trial the application and start to review possible optimizations.
 
 ## Links
-Github repository: https://github.com/nellyfabela/BetBud
+Github repository: https://github.com/nellyfabela/BetBud <br />
 Website application: https://protected-dusk-26900-3b74a0f4eef3.herokuapp.com/
