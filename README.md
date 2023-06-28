@@ -31,14 +31,14 @@ The user can invite their buds to bet depending on what they want as well as kno
 
 ## Credits
 
-List of collaborators:
-
-Jonathan Cobos [jonathanAnC0bosR]
-Nelly Fabela [nellyfabela]
-Isabella Ruiz [isanator2000]
-Hector Dominguez [HectorHJDH]
-Jesus Mondragon [le-shush]
-Raymundo Ponce [rponce23]
+List of collaborators:  
+  
+Jonathan Cobos [jonathanAnC0bosR]  
+Nelly Fabela [nellyfabela]  
+Isabella Ruiz [isanator2000]  
+Hector Dominguez [HectorHJDH]  
+Jesus Mondragon [le-shush]  
+Raymundo Ponce [rponce23]  
 
 ## Features
 
