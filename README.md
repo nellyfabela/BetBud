@@ -18,15 +18,16 @@ We learned as a team that no matter how much we know, we need to be very communi
 
 ## Installation
 
-For installation we worked with HTML, Talwind, Javascript, NodeJS, Express, Handlebars, MySQL, bcrypt and Sequilize. These were taught during class and made the project easier to be worked on.
+For installation we worked with HTML, Talwind, Javascript, NodeJS, Express, Handlebars, MySQL, bcrypt and Sequilize. These were taught during class and made the project easier to be worked on. There were many testing included in order to make sure that the application worked the way we envisioned.
 
 ## Usage
 
-As usage the application is easy to use.
+As usage the application consists on having a user to enter as an user (login) or a new user (signup). After having the information and entering the dashboard the bets can start!
 
-The user need to signup and after that the user can login into the app and start creating bets alog with his friends.
+The user can invite their buds to bet depending on what they want as well as know how they're doing, if they lost or won bets. 
 
-![alt text](assets/images/screenshot.png)
+<img width="578" alt="Screenshot 2023-06-27 at 6 17 08 p m" src="https://github.com/nellyfabela/BetBud/assets/126216168/62d10dbf-f93c-4e04-b3cd-251644d50f8d">
+
 
 ## Credits
 
@@ -58,4 +59,4 @@ There are no current test in the project further than the test while coding and 
 
 ## Links
 Github repository: https://github.com/nellyfabela/BetBud
-Website application: FALTA!!!
+Website application: https://protected-dusk-26900-3b74a0f4eef3.herokuapp.com/
