@@ -26,8 +26,7 @@ As usage the application consists on having a user to enter as an user (login) o
 
 The user can invite their buds to bet depending on what they want as well as know how they're doing, if they lost or won bets. 
 
-<img width="578" alt="Screenshot 2023-06-27 at 6 17 08 p m" src="https://github.com/nellyfabela/BetBud/assets/126216168/62d10dbf-f93c-4e04-b3cd-251644d50f8d">
-
+<img width="297" alt="Screenshot 2023-06-27 at 7 24 24 p m" src="https://github.com/nellyfabela/BetBud/assets/126216168/08d3d42d-8222-4869-a1d2-c48119d8662c">
 
 ## Credits
 
