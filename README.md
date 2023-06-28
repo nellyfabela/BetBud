@@ -58,5 +58,5 @@ For contributing, we encourage other programmers to provide ideas on how to impr
 There are no current test in the project further than the test while coding and running tests along the coding, but it will be desireble to run further tests for trial the application and start to review possible optimizations.
 
 ## Links
-Github repository: https://github.com/nellyfabela/BetBud
+Github repository: https://github.com/nellyfabela/BetBud  
 Website application: https://protected-dusk-26900-3b74a0f4eef3.herokuapp.com/
