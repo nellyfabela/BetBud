@@ -1,14 +1,26 @@
-<div>
-    <h3> My profile </h3>
+<div class="flex flex-col justify-center my-16">
+  <h3 class="flex flex-col text-white text-5xl justify-center self-center">My profile</h3>
+</div>
+
     {{!-- substitute user.avatar with the propper naming of the variable where the user img will be stored --}}
-    <img src="{{user.avatar}}" alt="avatar" style="width: 571px; height: 571px;" class="rounded-full">
-    <h1>{{user.username}}</h1>
+    <div class="rounded-full">
+        <img src="{{user.avatar}}" alt="avatar" style="width: 571px; height: 571px;" class="rounded-full">
+    </div>
 
-    <p>{{user.description}}</p>
+    <div class="h-screen w-screen bg-natural-950 flex flex-col items-center justify-center"> 
+    <h1 class="text-white text-center mb-8">{{user.username}}</h1>
+    </div>
+    
+    <div class="h-screen w-screen bg-natural-950 flex flex-col items-center justify-center">
+    <p class= "text-white text-center mb-8">{{user.description}}</p>
+    </div>
 
-    <h3>BETS</h3>
-    <div>
+
+    <div class="text-center my-16 text-3xl">
+    <h3 class="text-white text-center mb-8">BETS</h3>
+    </div>
     {{#each bets as |bet| }}
+
    {{!-- create a row of spaced boxes with rounded edges each with content from bets --}}
     <div class="flex flex-row justify-between">
         <div class="flex flex-col justify-center items-center bg-gray-200 rounded-lg p-4 m-4">
@@ -20,8 +32,9 @@
     {{/each}}
     </div>
 
-     <h3>AWARDS</h3>
-    <div>
+   <div class="text-center my-16 text-3xl">
+    <h3 class="text-white text-center mb-8">AWARDS</h3>
+    </div>
     {{#each bets as |bet| }}
    {{!-- create a row of spaced boxes with rounded edges each with content from bets --}}
     <div class="flex flex-row justify-between">
