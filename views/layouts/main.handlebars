@@ -10,6 +10,7 @@
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
 
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.css"  rel="stylesheet" />
     <link href="/dist/output.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
@@ -20,7 +21,7 @@
     <div class=" bg-neutral-950 h-full overflow-auto scrollbar-hide">
         <header class="static">
             <h1>
-                <a href="/" class="justify-self-center">BetBud</a>
+                <a href="/" class="flex justify-center py-2 text-xl">BetBud</a>
             </h1>
 
             <!-- Navbar start -->
@@ -49,7 +50,7 @@
                         class="flex left-0 w-full min-h-full flex-col overflow-y-auto justify-items-center align-middle bg-neutral-950 pt-6 pb-8 lg:h-full">
 
                         <!-- Conditionally render login or logout links -->
-                        
+
                         <!-- one category / navigation group -->
                         <div class="flex flex-col px-4 pb-6 justify-items-center w-full">
                             <h3 class="mb-2 text-xs font-medium uppercase text-gray-500">
@@ -71,7 +72,7 @@
                                         id="icoHome">
                                     </lord-icon>
                                     <a class="active flex rounded py-3 pl-4 pr-4 text-gray-50 hover:bg-gray-600"
-                                        href="/createbet">
+                                        href="/">
                                         <span class="select-none">Home</span>
                                     </a>
                                 </div>
@@ -98,7 +99,8 @@
                                         colors="primary:#ffffff" state="hover" style="width:50px;height:50px"
                                         id="icoBets">
                                     </lord-icon>
-                                    <a class="flex rounded py-3 pl-4 pr-4 text-gray-50 hover:bg-gray-600" href="/createbet">
+                                    <a class="flex rounded py-3 pl-4 pr-4 text-gray-50 hover:bg-gray-600"
+                                        href="/createbet">
                                         <span class="select-none">Create Bet</span>
                                     </a>
                                 </div>
@@ -110,10 +112,10 @@
                             </lord-icon>
                             <a class="self-center ml-4" id="logout">Logout</a>
                         </button>
-                        
+
                         {{!-- Change the link for the updated URL for LOGIN --}}
-                        <a href="/login">Login</a>
-                        
+                        {{!-- <a href="/login">Login</a> --}}
+
                     </nav>
                 </div>
             </section>
@@ -150,10 +152,9 @@
     </script>
 
     <!-- Render script for logged in users only -->
-   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.js"></script>
     <script src="./js/logout.js"></script>
 
-   
 </body>
 
 </html>

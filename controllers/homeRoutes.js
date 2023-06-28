@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Category } = require('../models');
+const { User, Bet } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -29,8 +29,23 @@ router.get('/login', async (req, res) => {
 // TODO - add withAuth to this route router.get('/profile', withAuth, async (req, res) => {
 router.get('/profile', withAuth, async (req, res) => {
     try {
-        res.render('profile');
-    } catch (err) {
+        const userData = await User.findByPk(req.session.user_id, {
+            attributes: { exclude: ['password'] },
+            include: [{ model: Bet }],
+        });
+
+        // const betData = await Bet.findOne({ where: { user_id: req.session.user_id } });
+        // const bet = betData.get({ plain: true });
+
+        console.log(userData);
+
+        const user = userData.get({ plain: true });
+
+        res.render('profile', {user});
+
+        // res.status(200).json({userData});
+    }
+        catch (err) {
         res.status(500).json(err);
     }
 });

@@ -1,35 +1,60 @@
-<div>
-    <h3> My profile </h3>
+<div class="flex flex-col place-content-center">
+    <h3 class="self-center text-5xl"> My profile </h3>
     {{!-- substitute user.avatar with the propper naming of the variable where the user img will be stored --}}
-    <img src="{{user.avatar}}" alt="avatar" style="width: 571px; height: 571px;" class="rounded-full">
-    <h1>{{user.username}}</h1>
+    <img src="https://i.kym-cdn.com/entries/icons/original/000/021/807/ig9OoyenpxqdCQyABmOQBZDI0duHk2QZZmWg2Hxd4ro.jpg" alt="avatar" style="width: 250px; height: 250px;" class="rounded-full object-cover self-center my-16">
+    <h1 class="text-5xl self-center my-4">{{user.username}}</h1>
 
-    <p>{{user.description}}</p>
+    <p class="text-2xl self-center">{{user.email}}</p>
 
-    <h3>BETS</h3>
-    <div>
-    {{#each bets as |bet| }}
+    <h3 class="text-xl mt-8">BETS</h3>
+    <div class="">
+    {{!-- {{#each bets as |bet| }} --}}
    {{!-- create a row of spaced boxes with rounded edges each with content from bets --}}
     <div class="flex flex-row justify-between">
-        <div class="flex flex-col justify-center items-center bg-gray-200 rounded-lg p-4 m-4">
-            <h3>{{bet.title}}</h3>
-            <p>{{bet.description}}</p>
-            <p>{{bet.status}}</p>
+        <div class="flex flex-col justify-center items-center bg-neutral-950 border-2 border-yellow-500 shadow-xl  hover:shadow-yellow-500/60 rounded-lg p-4 m-4">
+            {{!-- <h3>{{bet.category_name}}</h3>
+            <p>{{bet.product_name}}</p> --}}
+            <h3 class="text-lg text-yellow-500">Gana el Ame</h3>
+            <p class="text-sm">Chelas 🍻</p> 
+        </div>
+        <div class="flex flex-col justify-center items-center bg-neutral-950 border-2 border-yellow-500 shadow-xl  hover:shadow-yellow-500/60 rounded-lg p-4 m-4">
+            {{!-- <h3>{{bet.category_name}}</h3>
+            <p>{{bet.product_name}}</p> --}}
+            <h3 class="text-lg text-yellow-500">Oscar para Pinocho</h3>
+            <p class="text-sm">Pizza 🍕</p> 
+        </div>
+        <div class="flex flex-col justify-center items-center bg-neutral-950 border-2 border-yellow-500 shadow-xl  hover:shadow-yellow-500/60 rounded-lg p-4 m-4">
+            {{!-- <h3>{{bet.category_name}}</h3>
+            <p>{{bet.product_name}}</p> --}}
+            <h3 class="text-lg text-yellow-500">Gana el Toluca</h3>
+            <p class="text-sm">Tickets 🎞</p> 
         </div>
     </div>
-    {{/each}}
+    {{!-- {{/each}} --}}
     </div>
 
-     <h3>AWARDS</h3>
+     <h3 class="text-xl mt-8">AWARDS</h3>
     <div>
-    {{#each bets as |bet| }}
+    {{!-- {{#each bets as |bet| }} --}}
    {{!-- create a row of spaced boxes with rounded edges each with content from bets --}}
     <div class="flex flex-row justify-between">
-        <div class="flex flex-col justify-center items-center bg-gray-200 rounded-lg p-4 m-4">
-            <h3>{{bet.title}}</h3>
+        <div class="flex flex-col justify-center items-center  bg-neutral-950 border-2 border-pink-500 shadow-xl  hover:shadow-pink-500/60 rounded-lg p-4 m-4">
+            {{!-- <h3>{{bet.category_name}}</h3> --}}
+            <h3 class="text-lg text-pink-500"> Palomitas 🍿</h3>
+            <p class="text-sm">de: Raymundo</p>
+        </div>
+         <div class="flex flex-col justify-center items-center  bg-neutral-950 border-2 border-pink-500 shadow-xl  hover:shadow-pink-500/60 rounded-lg p-4 m-4">
+            {{!-- <h3>{{bet.category_name}}</h3> --}}
+            <h3 class="text-lg text-pink-500"> Coca 🥤</h3>
+            <p class="text-sm">de: Nelly</p>
+        </div>
+         <div class="flex flex-col justify-center items-center  bg-neutral-950 border-2 border-pink-500 shadow-xl  hover:shadow-pink-500/60 rounded-lg p-4 m-4">
+            {{!-- <h3>{{bet.category_name}}</h3> --}}
+            <h3 class="text-lg text-pink-500"> Pizza 🍕</h3>
+            <p class="text-sm">de: Jonathan</p>
         </div>
     </div>
-    {{/each}}
+    {{!-- {{/each}} --}}
     </div>
 
 </div>
