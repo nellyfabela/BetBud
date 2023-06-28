@@ -16,7 +16,7 @@ body {
 </header>
 
 {{!-- checkbox for what are you betting over start --}}
-
+{{!-- 
 <div class="h-screen w-screen bg-natural-950 flex flex-col items-center justify-center">
   <h3 class="text-white text-center mb-8">What are you betting over?</h3>
   <div class="flex">
@@ -45,13 +45,22 @@ body {
       </label>
     </div>
   </div>
-</div>
+</div> --}}
 {{!-- checkbox for what are you betting over end --}}
+
+<label for="underline_select" class="sr-only block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label>
+<select id="underline_select" class="block py-2.5 px-4 w-full text-sm text-white bg-transparent border-0 border-b-2 border-yellow-500 appearance-none dark:text-white dark:border-yellow-700 focus:outline-none focus:ring-0 focus:border-pink-500 peer shadow-xl 
+  hover:shadow-yellow-500/60">
+  <option selected>What are you betting over?</option>
+  <option value="Sports">Sports</option>
+  <option value="Cinema">Cinema</option>
+  <option value="School">School</option>
+</select>
 
 
 {{!-- checkbox for what are you betting start --}}
 
-<div class="h-screen w-screen bg-black-900 flex flex-col items-center justify-center">
+{{!-- <div class="h-screen w-screen bg-black-900 flex flex-col items-center justify-center">
   <h3 class="text-white text-center mb-8">What are you betting?</h3>
   <div class="flex">
     <div class="checkbox-container bg-black">
@@ -87,7 +96,18 @@ body {
       </label>
     </div>
   </div>
-</div>
+</div> --}}
+
+<label for="underline_select" class="sr-only block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label>
+<select id="underline_select" class="block py-2.5 px-4 w-full text-sm text-white bg-transparent border-0 border-b-2 border-yellow-500 appearance-none dark:text-white dark:border-yellow-700 focus:outline-none focus:ring-0 focus:border-pink-500 peer shadow-xl 
+  hover:shadow-yellow-500/60">
+  <option selected>Choose bet product</option>
+  <option value="dish">Dish</option>
+  <option value="cinema">Cinema Ticket</option>
+  <option value="giftcard">Giftcard</option>
+  <option value="drink">Drink</option>
+</select>
+
 
 <div class="relative text-lg bg-transparent text-gray-800">
   <div class="flex items-center border-b-2 border-teal-500 py-2">
