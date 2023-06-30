@@ -12,7 +12,10 @@ const loginFormHandler = async (event) => {
       headers: { 'Content-Type': 'application/json'},
     });
 
+    console.log(response);
+
     if(response.ok) {
+      console.log('success');
       document.location.replace('/profile');
     } else {
       alert(response.statusText);
